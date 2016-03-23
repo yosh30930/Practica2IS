@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2016 4:24:47 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="objetoshibernate.Servidor" table="servidor" schema="public" optimistic-lock="version">
+        <id name="nidusuario" type="int">
+            <column name="nidusuario" />
+            <generator class="foreign">
+                <param name="property">usuario</param>
+            </generator>
+        </id>
+        <one-to-one name="usuario" class="objetoshibernate.Usuario" constrained="true"></one-to-one>
+        <property name="visitas" type="java.lang.Integer">
+            <column name="visitas" />
+        </property>
+    </class>
+</hibernate-mapping>
