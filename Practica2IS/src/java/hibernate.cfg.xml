@@ -4,10 +4,12 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/Practica2IS</property>
-    <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password"></property>
-    <mapping resource="objetoshibernate/Servidor.hbm.xml"/>
-    <mapping resource="objetoshibernate/Usuario.hbm.xml"/>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/login</property>
+    <property name="hibernate.connection.username"></property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping resource="model/Login.hbm.xml"/>
+    <mapping resource="model/Usuario.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
